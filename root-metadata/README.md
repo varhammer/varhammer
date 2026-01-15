@@ -1,8 +1,12 @@
 # Varhammer — Portable Common Lisp Environment
 
+![GitHub repo size](https://img.shields.io/github/repo-size/varhammer/varhammer?style=flat)
+![License](https://img.shields.io/github/license/varhammer/varhammer?style=flat)
+![Release](https://img.shields.io/github/v/release/varhammer/varhammer?style=flat)
+
 > **Emacs 30.2 + SBCL 2.6.0 + SLIME 2.32 + Quicklisp**  
 > Fully offline, USB-ready, no installation required.  
-> Works even without internet (e.g., in restricted regions).
+> Works even without internet (e.g., in regions with limited connectivity).
 
 ![Portable](https://img.shields.io/badge/Portable-Yes-green?logo=windows)
 ![Offline](https://img.shields.io/badge/Offline-Ready-blue)
