@@ -1,0 +1,54 @@
+Varhammer Portable Common Lisp Environment — Third-Party Licenses
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Varhammer includes software from the following projects.
+Each component is licensed under its own terms as listed below.
+
+──────────────────────────────────────────────────────────────
+
+1. GNU Emacs 30.2
+   - License: GNU GPL v3+
+   - Source: https://www.gnu.org/software/emacs/
+   - Note: Bundled under GPLv3+ as permitted by the license.
+
+2. Steel Bank Common Lisp (SBCL) 2.6.0
+   - License: Public Domain (with some files under MIT/BSD)
+   - Source: https://sbcl.org/
+
+3. SLIME 2.32
+   - License: GNU GPL v2+ (compatible with GPLv3+)
+   - Source: https://github.com/slime/slime
+
+4. Quicklisp
+   - License: MIT
+   - Source: https://www.quicklisp.org/beta/
+
+5. cl-ppcre
+   - License: BSD 2-Clause
+   - Source: https://edicl.github.io/cl-ppcre/
+
+6. Bordeaux-Threads
+   - License: MIT
+   - Source: https://github.com/sionescu/bordeaux-threads
+   - Copyright: © 2006–2025 Dan Kortchinsky et al.
+
+7. Local-Time
+   - License: BSD 3-Clause
+   - Source: https://github.com/dlowe-net/local-time
+   - Copyright: © 2007–2025 Dan Lowe
+
+──────────────────────────────────────────────────────────────
+
+All third-party components are used in compliance with their
+respective licenses. The inclusion of permissively licensed
+software in a GPLv3+ project is explicitly allowed.
+
+The complete source code of this distribution, including build
+scripts and configuration files, is available at:
+  https://github.com/varhammer/varhammer
+
+For questions, contact: upfire@gmail.com

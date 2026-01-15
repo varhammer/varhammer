@@ -1,0 +1,8 @@
+# Build artifacts
+tmp_download/
+varhammer/
+*.zip
+
+# OS files
+Thumbs.db
+.DS_Store
