@@ -1,12 +1,14 @@
-# Text files — preserve LF
+# Text files — preserve LF (Unix-style line endings)
 *.lisp text eol=lf
 *.el   text eol=lf
 *.md   text eol=lf
 *.txt  text eol=lf
+
+# Windows scripts — preserve CRLF
 *.ahk  text eol=crlf
 *.ps1  text eol=crlf
+*.bat  text eol=crlf
 
 # Binary files
 *.exe binary
 *.zip binary
-*.bat binary
