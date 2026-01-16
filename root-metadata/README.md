@@ -36,6 +36,16 @@
 
 ---
 
+## 🛠️ Build from source
+
+If you want to customize or rebuild Varhammer:
+
+1. Place your builds in `emacs-source/`, `sbcl-source/`, etc.
+2. Run `varhammer-build.bat`
+3. Get your own `varhammer-portable.zip`
+
+---
+
 ## 📦 Included Components
 
 | Component | Version | License | Official Project |
