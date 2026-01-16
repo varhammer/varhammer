@@ -19,7 +19,7 @@
 - ✅ **No admin rights needed**
 - ✅ **No installation** — just extract and run
 - ✅ **No command window** — clean GUI via `run-emacs.exe`
-- ✅ **Preinstalled libraries**: `cl-ppcre`, `alexandria`, `uiop`, `bordeaux-threads`, `local-time`
+- ✅ **Preinstalled libraries**: `cl-ppcre`, `bordeaux-threads`, `local-time`
 - ✅ **Works from USB flash drive**
 - ✅ **Fully offline after initial setup**
 
