@@ -1,8 +1,21 @@
-# Build artifacts
-tmp_download/
+﻿
+# Build artifacts - DO NOT commit
 varhammer/
-*.zip
+tmp_download/
+emacs-source/
+sbcl-source/
+slime-source/
+quicklisp-source/
+local-projects-source/
+sbcl-config/
+themes-source/
+root-metadata/
 
-# OS files
+# Temporary files
+*.tmp
+*.log
 Thumbs.db
-.DS_Store
+
+# Distribution archive (hosted in Releases)
+varhammer-portable.zip
+

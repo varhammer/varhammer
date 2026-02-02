@@ -30,7 +30,7 @@
 1. Extract `varhammer-portable.zip` to any folder (e.g., `D:\Varhammer\`)
 2. Double-click **`run-emacs.exe`**
 3. In Emacs, press `M-x slime` to start the REPL
-4. Use Common Lisp with full library support — **no internet required!**
+3bee263 (chore: release 1.1.0 'Midnight' (sources only))
 
 > 💡 Prefer CLI? Run `run-emacs.bat` (shows console window).
 
