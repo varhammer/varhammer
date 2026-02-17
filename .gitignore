@@ -1,7 +1,14 @@
-﻿@'
-# .gitignore — varhammer 1.1.2 "Midnight"
+﻿# .gitignore — varhammer 1.1.5 "Midnight"
 # Exclude build artifacts and temporary files from version control.
 # Sources only: distribution binaries hosted in GitHub Releases.
+
+# --- Binary builds (do not commit) ---
+*.zip
+*.exe
+*.dll
+*.so
+*.dylib
+*.msi
 
 # Build artifacts - DO NOT commit
 varhammer/
@@ -21,8 +28,3 @@ Thumbs.db
 
 # Distribution archive (hosted in Releases)
 varhammer-portable.zip
-'@ | Set-Content ".gitignore" -Encoding UTF8
-
-
-# v1.1.2 metadata refresh
-
