@@ -11,4 +11,7 @@
 
 # Binary files
 *.exe binary
+*.dll binary
+*.core binary
+*.png binary
 *.zip binary

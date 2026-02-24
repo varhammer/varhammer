@@ -1,10 +1,11 @@
-﻿# .gitignore — varhammer 1.1.5 "Midnight"
+﻿# .gitignore — varhammer 1.1.7 "Midnight"
 # Exclude build artifacts and temporary files from version control.
 # Sources only: distribution binaries hosted in GitHub Releases.
 
 # --- Binary builds (do not commit) ---
 *.zip
 *.exe
+!bin/run-emacs.exe          # ✅ Exception: our custom wrapper
 *.dll
 *.so
 *.dylib
