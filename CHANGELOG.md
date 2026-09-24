@@ -7,6 +7,20 @@ development environment for Windows.
 The format is based on [Keep a Changelog](https://keepachangelog.com/).
 Project licensed under **GPLv3+**.
 
+## [1.1.8] — 2026-09-24 — "Midnight"
+
+### Added
+- Live theme toggle: instantly switch between `varhammer` and `spolsky` (Sublime Text 2-style) themes.
+
+### Changed
+- Simplified theme toggle keybinding from `C-c t v` to `C-c t` for faster workflow.
+- Localized all `init.el` comments and docstrings to American English for better international compatibility.
+
+### Fixed
+- Eliminated `Invalid read syntax` startup errors caused by encoding issues (removed emojis from `message` calls).
+- Corrected parenthesis balancing in `init.el` to guarantee safe and reliable configuration loading.
+- Ensured stable theme loading via `emacs-startup-hook` without buffer artifacts.
+
 ## [1.1.0] — 2026-02-02 — "Midnight"
 
 ### Added
@@ -21,7 +35,7 @@ Project licensed under **GPLv3+**.
 - REPL welcome message showing environment details on connect
 - Keybindings for workflow acceleration:
   - `C-c s` — launch SLIME REPL instantly
-  - `C-c t v` — toggle varhammer theme
+  - `C-c t v` — toggle varhammer theme *(deprecated in 1.1.8)*
 - Startup UX improvements:
   - Clean echo area messages without buffer artifacts
   - Friendly first-start reminder for new users
@@ -68,5 +82,4 @@ Project licensed under **GPLv3+**.
 ---
 
 > ℹ️ "Genesis" established the portable foundation.  
-> "Midnight" refined the visual experience for focused Lisp
-> development.
+> "Midnight" refined the visual experience, fixed startup reliability, and added flexible theme toggling for focused Lisp development.

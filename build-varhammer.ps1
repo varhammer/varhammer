@@ -1,7 +1,6 @@
-# build-varhammer.ps1 — portable varhammer: Emacs 30.2 +
-# SBCL 2.6.0 + SLIME 2.32
-# Fully offline after initial setup — works from USB flash
-# drive
+# build-varhammer.ps1 — Varhammer 1.1.8 "Midnight" portable development environment:
+# Emacs 30.2 + SBCL 2.6.0 + SLIME 2.32
+# Fully offline after initial setup — works from USB flash drive
 
 $ErrorActionPreference = "Stop"
 $ProgressPreference = "SilentlyContinue"
@@ -59,22 +58,37 @@ if (-not (Test-Path $sourceInitEl)) {
 
 Copy-Item -Path $sourceInitEl -Destination "$emacsD/init.el" -Force
 
-# [5/11] Copy custom varhammer theme
-Write-Host "[5/11] Copying varhammer theme..." -ForegroundColor Cyan
+# [5/11] Copy custom themes (varhammer and spolsky)
+Write-Host "[5/11] Copying custom themes (varhammer & spolsky)..." -ForegroundColor Cyan
 
-$themeSource = "$PSScriptRoot\themes-source\varhammer-theme.el"
 $themeDestDir = "$RootDir\.emacs.d\themes"
-$themeDestFile = "$themeDestDir\varhammer-theme.el"
+New-Item -ItemType Directory -Path $themeDestDir -Force | Out-Null
 
-if (-not (Test-Path $themeSource)) {
-    Write-Host "Theme not found: $themeSource" `
-      -ForegroundColor Red
-    Write-Host "Place varhammer-theme.el in build directory root." -ForegroundColor Yellow
+# 1. Copy varhammer theme (strict requirement)
+$varhammerThemeSource = "$PSScriptRoot\themes-source\varhammer-theme.el"
+$varhammerThemeDest = "$themeDestDir\varhammer-theme.el"
+
+if (-not (Test-Path $varhammerThemeSource)) {
+    Write-Host "ERROR: Theme not found: $varhammerThemeSource" -ForegroundColor Red
+    Write-Host "Place varhammer-theme.el in the themes-source directory." -ForegroundColor Yellow
     exit 1
 }
+Copy-Item -Path $varhammerThemeSource -Destination $varhammerThemeDest -Force
+Write-Host "  -> varhammer-theme.el copied." -ForegroundColor Green
 
-New-Item -ItemType Directory -Path $themeDestDir -Force | Out-Null
-Copy-Item -Path $themeSource -Destination $themeDestFile -Force
+# 2. Copy spolsky theme (required for C-c t toggle)
+$spolskyThemeSource = "$PSScriptRoot\themes-source\spolsky-theme.el"
+$spolskyThemeDest = "$themeDestDir\spolsky-theme.el"
+
+if (-not (Test-Path $spolskyThemeSource)) {
+    Write-Host "WARNING: spolsky-theme.el not found at $spolskyThemeSource" -ForegroundColor Yellow
+    Write-Host "  The 'C-c t' theme toggle will fail if this file is missing." -ForegroundColor Yellow
+    # Раскомментируйте строку ниже, если хотите сделать наличие spolsky строго обязательным:
+    # exit 1
+} else {
+    Copy-Item -Path $spolskyThemeSource -Destination $spolskyThemeDest -Force
+    Write-Host "  -> spolsky-theme.el copied." -ForegroundColor Green
+}
 
 # [6/11] Create run-emacs.bat
 Write-Host "[6/11] Creating run-emacs.bat..." -ForegroundColor Cyan
